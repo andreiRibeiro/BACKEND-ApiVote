@@ -11,7 +11,7 @@ Utiliza JPA para as operações com banco dados, e esta documentada com Swagger.
 #### 1) Formas de execução do sistema e testes
 
    ##### Executar com Jar 
-   ><code>java -jar icarros-0.0.1-SNAPSHOT.jar</code>
+   ><code>java -jar vote-0.0.1-SNAPSHOT.jar</code>
 
    ##### Executar testes 
    ><code>mvn test</code>
@@ -20,7 +20,7 @@ Utiliza JPA para as operações com banco dados, e esta documentada com Swagger.
 ><code>[PostmanCollection.json](Sicredi.postman_collection.json)</code>
 
 #### 3) Swagger
-><code>http://localhost:8383/vote/api/v1/swagger-ui.html</code>
+><code>https://api-vote-sicredi.herokuapp.com/vote/api/v1/swagger-ui.html</code>
 
 #### 4) Imagem DockerHub
 ><code>docker pull andreiaar/sicredi:latest</code>
