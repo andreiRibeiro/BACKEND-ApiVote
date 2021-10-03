@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "cc86fecc-d624-4282-89e8-cb23d3bc0936",
+		"name": "Sicredi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Criar pauta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Pauta 1\",\n\t\"description\": \"Pauta para votar questão x\"\t\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8383/vote/api/v1/plan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8383",
+					"path": [
+						"vote",
+						"api",
+						"v1",
+						"plan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar pauta por uuid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8383/vote/api/v1/plan/65f39e64-97bc-48e3-aa58-34630e0bae00",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8383",
+					"path": [
+						"vote",
+						"api",
+						"v1",
+						"plan",
+						"65f39e64-97bc-48e3-aa58-34630e0bae00"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar pautas",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8383/vote/api/v1/plan/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8383",
+					"path": [
+						"vote",
+						"api",
+						"v1",
+						"plan",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Abrir sessão votação",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8383/vote/api/v1/plan/open/fca49ee8-060e-4f06-b42f-d2105db6c29e?openingTime=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8383",
+					"path": [
+						"vote",
+						"api",
+						"v1",
+						"plan",
+						"open",
+						"fca49ee8-060e-4f06-b42f-d2105db6c29e"
+					],
+					"query": [
+						{
+							"key": "openingTime",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obter resultado da votação",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8383/vote/api/v1/plan/results/65f39e64-97bc-48e3-aa58-34630e0bae00",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8383",
+					"path": [
+						"vote",
+						"api",
+						"v1",
+						"plan",
+						"results",
+						"65f39e64-97bc-48e3-aa58-34630e0bae00"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Votar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8383/vote/api/v1/voting/65f39e64-97bc-48e3-aa58-34630e0bae00/00176499008?vote=Nao",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8383",
+					"path": [
+						"vote",
+						"api",
+						"v1",
+						"voting",
+						"65f39e64-97bc-48e3-aa58-34630e0bae00",
+						"00176499008"
+					],
+					"query": [
+						{
+							"key": "vote",
+							"value": "Nao"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir pauta",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8383/vote/api/v1/plan/9bd63d57-726b-42cc-a893-552be4938e15",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8383",
+					"path": [
+						"vote",
+						"api",
+						"v1",
+						"plan",
+						"9bd63d57-726b-42cc-a893-552be4938e15"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
