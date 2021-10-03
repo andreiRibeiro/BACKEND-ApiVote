@@ -11,7 +11,7 @@ Utiliza JPA para as operações com banco dados, e esta documentada com Swagger.
 #### 1) Formas de execução do sistema e testes
 
    ##### Executar com Jar 
-   ><code>java -jar icarros-0.0.1-SNAPSHOT.jar</code>
+   ><code>java -jar vote-0.0.1-SNAPSHOT.jar</code>
 
    ##### Executar testes 
    ><code>mvn test</code>
