@@ -18,8 +18,8 @@ public class VotingController {
     @GetMapping(value = "/{planUuid}/{cpf}", produces = MediaType.APPLICATION_JSON_VALUE)
     @ApiOperation(value = "Votar em uma pauta")
     public ResponseEntity<String> create(@PathVariable String planUuid,
-                                    @PathVariable String cpf,
-                                    @RequestParam String vote){
+                                         @PathVariable String cpf,
+                                         @RequestParam String vote){
         return ResponseEntity.ok().body(votingService.create(cpf, planUuid, vote));
     }
 }

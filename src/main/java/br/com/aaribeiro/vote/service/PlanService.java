@@ -126,6 +126,16 @@ public class PlanService {
                                 .totalVotings(plan.getVotings().size())
                                 .build();
 
+                        planDTO.setTotalVotesYes(plan.getVotings()
+                                .stream()
+                                .filter(vote -> vote.getVote().equals("SIM"))
+                                .count()
+                        );
+                        planDTO.setTotalVotesNo(plan.getVotings()
+                                .stream()
+                                .filter(vote -> vote.getVote().equals("NÃO"))
+                                .count()
+                        );
                         planDTO.setTotalVotings(plan.getVotings().size());
                         return planDTO;
                     })

@@ -18,5 +18,7 @@ public class PlanDTO {
     private String description;
     private String dateRegistry;
     private String closingData;
+    private long totalVotesYes;
+    private long totalVotesNo;
     private int totalVotings;
 }

@@ -23,8 +23,10 @@ public class VotingService {
     private final VotingComponent votingComponent;
     private final PlanRepository planRepository;
 
-    public String create(String cpf, String planUuid, String vote){
+    public String create(String cpfOrigi, String planUuid, String vote){
         try {
+            String cpf = cpfOrigi.replaceAll("[-.]","");
+
             log.info(String.format("Validando CPF [%s]", cpf));
 
             Plan plan = planRepository.findByUuid(planUuid)
